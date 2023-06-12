@@ -10,12 +10,18 @@ const config = {
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
   ],
+  docs: {
+    autodocs: "tag",
+  },
   framework: {
     name: "@storybook/react-vite",
     options: {},
   },
-  docs: {
-    autodocs: "tag",
+  core: {
+    builder: "@storybook/builder-vite",
+  },
+  features: {
+    storyStoreV7: true,
   },
   viteFinal: (config, { configType }) => {
     if (configType === "PRODUCTION") {
