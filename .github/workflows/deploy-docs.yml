@@ -16,16 +16,18 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
+          cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
 
-      - run: yarn install --frozen-lockfile
+      - run: npm ci
 
-      - run: yarn build
-				env:
-					TURBO_TOKEN: 0EE28UmWOtlFBZiXxR2t2lC2
-					TURBO_TEAM: rafaeld3v
-					
+      - run: npm run build
+        env:
+          TURBO_TOKEN: 0EE28UmWOtlFBZiXxR2t2lC2
+          TURBO_TEAM: rafaeld3v
+
       - name: Deploy storybook
         working-directory: ./packages/docs
-        run: touch storybook-static/.nojekyll && yarn run deploy-storybook -- --existing-output-dir=storybook-static
+        run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
