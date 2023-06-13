@@ -1,6 +1,6 @@
 {
-  "name": "@ignite-ui/react",
-  "version": "1.0.0",
+  "name": "@rafaeld3v-ignite-ui/react",
+  "version": "2.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -11,9 +11,9 @@
     "lint": "eslint src/**/*.ts* --fix"
   },
   "devDependencies": {
-    "@ignite-ui/eslint-config": "*",
-    "@ignite-ui/tokens": "*",
-    "@ignite-ui/ts-config": "*",
+    "@rafaeld3v-ignite-ui/eslint-config": "*",
+    "@rafaeld3v-ignite-ui/tokens": "*",
+    "@rafaeld3v-ignite-ui/ts-config": "*",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
     "react": "^18.2.0",

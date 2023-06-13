@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Box, Text, TextArea, TextAreaProps } from "@ignite-ui/react";
+import { Box, Text, TextArea, TextAreaProps } from "@rafaeld3v-ignite-ui/react";
 
 export default {
   title: "Form/Text Area",

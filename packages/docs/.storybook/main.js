@@ -25,7 +25,7 @@ const config = {
   },
   viteFinal: (config, { configType }) => {
     if (configType === "PRODUCTION") {
-      config.base = "/ignite-ui/";
+      config.base = "/rafaeld3v-ignite-ui/";
     }
 
     return config;

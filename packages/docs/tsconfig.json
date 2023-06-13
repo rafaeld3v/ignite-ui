@@ -1,5 +1,5 @@
 {
-  "extends": "@ignite-ui/ts-config/base.json",
+  "extends": "@rafaeld3v-ignite-ui/ts-config/base.json",
   "include": ["src", "**/*.mdx"],
   "compilerOptions": {
     "jsx": "react"

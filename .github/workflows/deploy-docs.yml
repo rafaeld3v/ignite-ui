@@ -20,7 +20,10 @@ jobs:
       - run: yarn install --frozen-lockfile
 
       - run: yarn build
-
+				env:
+					TURBO_TOKEN: 0EE28UmWOtlFBZiXxR2t2lC2
+					TURBO_TEAM: rafaeld3v
+					
       - name: Deploy storybook
         working-directory: ./packages/docs
         run: touch storybook-static/.nojekyll && yarn run deploy-storybook -- --existing-output-dir=storybook-static
